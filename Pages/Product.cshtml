@@ -1,0 +1,18 @@
+﻿@page 
+
+@model ProductModel
+@{
+
+	<form method="post">
+			<label for="name">Название товара</label>
+			<input type="text" name="name"/><br />
+			<label for="price">Цена товара</label>
+			<input type="number" name="price"/><br />
+			<input type="submit" asp-page-handler="" value="Получить скидку"/>
+			<label for="discont">Введите свою скидку(%)</label>
+			<input type="number" name="discont"/><br />
+			<input type="submit" asp-asp-page-handler="Discont" value="С учетом своей скидки"/>
+			</form>
+
+			<h3>@Model.MessageResult</h3>
+}
